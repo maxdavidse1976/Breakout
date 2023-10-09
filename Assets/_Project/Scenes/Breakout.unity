@@ -852,7 +852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
+  m_AnchoredPosition: {x: 50, y: -30}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1072391755
@@ -1513,6 +1513,16 @@ MonoBehaviour:
   _rigidbody: {fileID: 1814398678}
   _ballSpeed: 4
   _bottomBounds: -4.8
+  _score: 0
+  _scoreSpeed: 0.4
+  _lives: 5
+  _scoreText: {fileID: 1650182919}
+  _livesImage:
+  - {fileID: 1229035160}
+  - {fileID: 1024343782}
+  - {fileID: 1246951414}
+  - {fileID: 1089918284}
+  - {fileID: 517819595}
 --- !u!1 &1828022598
 GameObject:
   m_ObjectHideFlags: 0
