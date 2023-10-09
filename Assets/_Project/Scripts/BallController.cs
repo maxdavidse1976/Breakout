@@ -30,4 +30,12 @@ public class BallController : MonoBehaviour
     {
         _rigidbody.velocity = Vector2.down * _ballSpeed;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Brick"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }
