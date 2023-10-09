@@ -510,6 +510,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &949815013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 949815015}
+  - component: {fileID: 949815014}
+  m_Layer: 0
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &949815014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949815013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f0f91a26b30e04aaa5bcaac7bad50b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _size: {x: 16, y: 7}
+  _offset: {x: 1.1, y: 0.6}
+  _brickPrefabRow1: {fileID: 2399360211036146803, guid: 0aaadd0e26e6dd94c8582fea2a798d3a, type: 3}
+  _brickPrefabRow2: {fileID: 2399360211036146803, guid: 403cd8ea0624c74408b19665dc9b84c8, type: 3}
+  _brickPrefabRow3: {fileID: 2399360211036146803, guid: 0c80140242ea988488f3c69e9aa638e4, type: 3}
+  _brickPrefabRow4: {fileID: 2399360211036146803, guid: 67a02a272276e5c409be56056c6be14a, type: 3}
+  _brickPrefabRow5: {fileID: 2399360211036146803, guid: ff2648bf50ee13a46a5c05eafb2546bc, type: 3}
+--- !u!4 &949815015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949815013}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1254191564
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,3 +999,4 @@ SceneRoots:
   - {fileID: 266279234}
   - {fileID: 1814398676}
   - {fileID: 1801763003}
+  - {fileID: 949815015}
