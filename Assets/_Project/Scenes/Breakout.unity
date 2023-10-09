@@ -673,6 +673,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 1814398678}
   _ballSpeed: 4
+  _bottomBounds: -4.8
+  _topBounds: 4.8
+  _leftBounds: -7.8
+  _rightBounds: -7.8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
