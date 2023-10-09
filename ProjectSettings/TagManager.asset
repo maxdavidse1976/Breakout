@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Light Blue Brick
+  - Light Green Brick
+  - Orange Brick
+  - Red Brick
+  - Yellow Brick
   layers:
   - Default
   - TransparentFX
