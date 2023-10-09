@@ -289,6 +289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _paddleSpeed: 8
+  _maxBounds: 7.8
+  _minBounds: -7.8
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
