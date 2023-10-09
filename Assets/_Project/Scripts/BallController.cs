@@ -5,9 +5,6 @@ public class BallController : MonoBehaviour
     [SerializeField] Rigidbody2D _rigidbody;
     [SerializeField] float _ballSpeed = 4f;
     [SerializeField] float _bottomBounds = -4.8f;
-    [SerializeField] float _topBounds = 4.8f;
-    [SerializeField] float _leftBounds = -7.8f;
-    [SerializeField] float _rightBounds = -7.8f;
 
     void Start()
     {
@@ -17,7 +14,7 @@ public class BallController : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.y < _bottomBounds)
+        if (transform.position.y < _bottomBounds || Input.GetKeyDown(KeyCode.R))
         {
             ResetBall();
         }
