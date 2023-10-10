@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject _brickPrefabRow5;
     [SerializeField] GameObject _youWinPanel;
     [SerializeField] GameObject _gameOverPanel;
+    [SerializeField] GameObject _exitGamePanel;
     [SerializeField] GameObject _paddle;
 
     GameObject _newBrick;
@@ -19,6 +20,16 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         DrawBricks();    
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && 
+            !_gameOverPanel.activeInHierarchy && 
+            !_youWinPanel.activeInHierarchy) 
+        {
+            ExitGameOptions();
+        }
     }
 
     void DrawBricks()
@@ -76,5 +87,22 @@ public class LevelManager : MonoBehaviour
         _ballController.ResetBall();
         Time.timeScale = 1;
         UnhideBricks();
+    }
+
+    void ExitGameOptions()
+    {
+        Time.timeScale = 0;
+        _exitGamePanel.SetActive(true);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void NoExitGame()
+    {
+        Time.timeScale = 1;
+        _exitGamePanel.SetActive(false);
     }
 }
