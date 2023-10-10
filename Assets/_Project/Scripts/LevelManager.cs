@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] BallController _ballController;
     [SerializeField] Vector2Int _size;
     [SerializeField] Vector2 _offset;
     [SerializeField] GameObject _brickPrefabRow1;
@@ -9,7 +10,10 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject _brickPrefabRow3;
     [SerializeField] GameObject _brickPrefabRow4;
     [SerializeField] GameObject _brickPrefabRow5;
-    
+    [SerializeField] GameObject _youWinPanel;
+    [SerializeField] GameObject _gameOverPanel;
+    [SerializeField] GameObject _paddle;
+
     GameObject _newBrick;
 
     void Start()
@@ -45,5 +49,32 @@ public class LevelManager : MonoBehaviour
                 _newBrick.transform.position = transform.position + new Vector3((float)((_size.x - 1) * .5f - i) * _offset.x, j * _offset.y, 0);
             }
         }
+        _ballController.brickCount = transform.childCount;
+    }
+
+    void UnhideBricks()
+    {
+        for (int i = 0; i <= transform.childCount - 1; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(true);
+        }
+        _ballController.brickCount = transform.childCount;
+    }
+
+    public void PlayAgain()
+    {
+        _youWinPanel.SetActive(false);
+        _gameOverPanel.SetActive(false);
+        for (int i =0; i <= 4; i++)
+        {
+            _ballController.livesImage[i].SetActive(true);
+        }
+        _ballController.lives = 5;
+        _ballController.score = 0;
+        _ballController.scoreText.text = _ballController.score.ToString("00000");
+        _paddle.transform.position = new Vector3(0, _paddle.transform.position.y, _paddle.transform.position.z);
+        _ballController.ResetBall();
+        Time.timeScale = 1;
+        UnhideBricks();
     }
 }
